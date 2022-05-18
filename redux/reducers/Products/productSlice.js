@@ -6,10 +6,12 @@ export const productSlice = createSlice({
 
   reducers: {
     setProducts: (state, action) => {
+      console.log(action.payload,"HERE");
+      const productArray = action.payload;
+      productArray.sort(function(etaA,etaB){
+        return etaA.eta - etaB.eta
+      });
       return { ...state, products: [...action.payload], error: "" };
-    },
-    setSelectedProductId: (state, action) => {
-      return {...state, selectedProductId: action.payload}
     },
     setError: (state, action) => {
       return { ...state, error: action.payload };
@@ -21,28 +23,3 @@ export const productSlice = createSlice({
 export const { setProducts, setError } = productSlice.actions;
 
 export default productSlice.reducer;
-
-    // availabilityId: '',
-    // eta: 0,
-    // supplier: {
-    //   supplierName: '',
-    //   supplierKey: ''
-    // },
-    // category: {
-    //   productType: '',
-    //   vehicleType: '',
-    //   subCategory: '',
-    // },
-    // price: {
-    //   amount: 0,
-    //   currency: ''
-    // },
-    // product:{
-    //   maxPax: 0,
-    //   bags:{
-    //     max: 0,
-    //     large: 0,
-    //     small: 0
-    //   },
-    //   maxSeats:0
-    // }

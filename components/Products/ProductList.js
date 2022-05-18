@@ -11,11 +11,12 @@ import {
 import { routes } from "../../routes";
 import { getProductsAction } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
-
+import Product from "./Product";
 const ProductList = ({ navigation }) => {
   const dispatch = useDispatch();
   const { products, error } = useSelector((state) => state.productSlice);
 
+  console.log()
   useEffect(() => {
     dispatch(getProductsAction());
   }, [dispatch]);
@@ -23,6 +24,7 @@ const ProductList = ({ navigation }) => {
   // https://reactnative.dev/docs/flatlist
   //flatlist-selectable
 
+  //renders our item with our product component
   const renderItem = ({ item }) => (
     <Product
       product={item}
@@ -51,7 +53,6 @@ const ProductList = ({ navigation }) => {
   }
   return (
     <SafeAreaView style={styles.container}>
-      
       <FlatList
         data={products}
         renderItem={renderItem}
@@ -60,22 +61,7 @@ const ProductList = ({ navigation }) => {
     </SafeAreaView>
   );
 };
-const Product = ({ product, onPress }) => {
-  return (
-    <TouchableOpacity onPress={onPress} style={styles.item}>
-      <Text>Category:</Text>
-      <Text style={styles.title}>
-        {product.category.productType} {product.category.vehicleType}
-      </Text>
-      <Text>Supplier: {product.supplier.supplierName}</Text>
-      <Text>ETA: {product.eta} minutes</Text>
-      <Text>
-        Price: {product.price.currency}
-        {product.price.amount}
-      </Text>
-    </TouchableOpacity>
-  );
-};
+
 // supplier name, category, ETA (in min), price
 export default ProductList;
 
@@ -83,14 +69,5 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: 0,
-  },
-  item: {
-    backgroundColor: "#f9c2ff",
-    padding: 20,
-    marginVertical: 8,
-    marginHorizontal: 16,
-  },
-  title: {
-    fontSize: 22,
   },
 });

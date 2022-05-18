@@ -33,10 +33,7 @@ const ProductItem = ({route, navigation}) => {
       <Text>
        Price: {product.price.currency}{product.price.amount} 
      </Text> 
-  
-    <Button
-      title="Learn More"
-    />
+
     </View>
   );
 };

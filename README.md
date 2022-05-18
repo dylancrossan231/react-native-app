@@ -14,14 +14,14 @@ Assets: https://github.com/cartrawler/mobility-react-native-assessment/tree/mast
 
 ### Core objectives:
 
-- Provide a project made in React Native running on Android and/or iOS. (You may use the template repository provided as a base if you want)
-- Parse message from URL feed
-- Create a visual representation of the list of mobility products in React Native
-- Each product block must contain the following data: supplier name, category, ETA (in min), price
-- Default order of products must be driven by “ETA”
+- Provide a project made in React Native running on Android and/or iOS. (You may use the template repository provided as a base if you want)//DONE
+- Parse message from URL feed//DONE
+- Create a visual representation of the list of mobility products in React Native//DONE
+- Each product block must contain the following data: supplier name, category, ETA (in min), price//DONE
+- Default order of products must be driven by “ETA” //DONE
 - When you tap on a product block, you should display a screen showing information for that product only (It can be the same information as on the full product list)
-- Clean, organised, readable and easily understandable code is important
-- Show us the quality of your code and project structure
+- Clean, organised, readable and easily understandable code is important//DONE
+- Show us the quality of your code and project structure //DONE
 
 ### Advanced (optional):
 
