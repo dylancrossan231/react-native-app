@@ -4,6 +4,10 @@ import { TouchableOpacity, StyleSheet } from "react-native";
 import { Box, Image, Center, Stack, Heading, Text } from "native-base";
 import { SvgUri } from "react-native-svg";
 import ProductImage from "./ProductImage";
+const boltUri ="https://raw.githubusercontent.com/cartrawler/mobility-react-native-assessment/14a686fdb5e27fa6e1afceb4ba4c7865ad5a0f02/assets/supplier-bolt.svg";
+const freenowUri ="https://raw.githubusercontent.com/cartrawler/mobility-react-native-assessment/14a686fdb5e27fa6e1afceb4ba4c7865ad5a0f02/assets/supplier-bolt.svg";
+const otheruri =
+  "https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/debian.svg";
 const ProductTemplate = ({ product, onPress }) => {
   return (
     <TouchableOpacity onPress={onPress} style={styles.item}>
@@ -27,7 +31,17 @@ const ProductTemplate = ({ product, onPress }) => {
           }}
         >
           <Box>
-          <ProductImage supplierKey={product.supplier.supplierKey}/>
+            <ProductImage supplierKey={product.supplier.supplierKey} />
+
+            {/* {product.supplier.supplierKey === "bolt" ? (
+              <AspectRatio w="100%" ratio={16 / 9}>
+                <SvgUri width="100%" height="100%" uri={boltUri} />
+              </AspectRatio>
+            ) : (
+              <AspectRatio w="100%" ratio={16 / 9}>
+                <SvgUri width="100%" height="100%" uri={freenowUri} />
+              </AspectRatio>
+            )} */}
             <Center
               bg="violet.500"
               _dark={{

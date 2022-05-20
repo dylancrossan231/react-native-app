@@ -4,8 +4,6 @@ import { TouchableOpacity, StyleSheet } from "react-native";
 import { Box, Image, Center, Stack, Heading, Text } from "native-base";
 import ImageTemplate from "./ProductItemImage";
 const ProductItemTemplate = ({ product, onPress }) => {
-
-  
   return (
     <TouchableOpacity onPress={onPress} style={styles.item}>
       <Box alignItems="center">
@@ -55,8 +53,7 @@ const ProductItemTemplate = ({ product, onPress }) => {
             <Stack space={2}>
               <Box flexDirection="row">
                 <Heading size="md" ml="-1">
-                  {product.category.productType}
-                  {product.category.vehicleType}
+                  {product.category.productType} {product.category.vehicleType}
                 </Heading>
               </Box>
               <Text
@@ -105,6 +102,18 @@ const ProductItemTemplate = ({ product, onPress }) => {
                   {product.supplier.supplierName}
                 </Text>
               </HStack>
+              <Text
+                fontSize="xs"
+                _light={{
+                  color: "violet.500",
+                }}
+                _dark={{
+                  color: "violet.400",
+                }}
+                style={{ position: "absolute", right: 0 }}
+              >
+                {product.category.subCategory.toString().replace("_", " ")}
+              </Text>
             </HStack>
           </Stack>
         </Box>

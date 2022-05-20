@@ -19,15 +19,15 @@ Assets: https://github.com/cartrawler/mobility-react-native-assessment/tree/mast
 - Create a visual representation of the list of mobility products in React Native//DONE
 - Each product block must contain the following data: supplier name, category, ETA (in min), price//DONE
 - Default order of products must be driven by “ETA” //DONE
-- When you tap on a product block, you should display a screen showing information for that product only (It can be the same information as on the full product list)
+- When you tap on a product block, you should display a screen showing information for that product only (It can be the same information as on the full product list)//DONE
 - Clean, organised, readable and easily understandable code is important//DONE
 - Show us the quality of your code and project structure //DONE
 
 ### Advanced (optional):
 
-- Display the Supplier logo for each product (You may use the SVG icons from the `assets/` folder of the repository provided)
-- Display the Product type/Vehicle type icon for each product (You may use the SVG icons from the `assets/` folder of the repository provided)
-- Offer different sorting orders
+- Display the Supplier logo for each product (You may use the SVG icons from the `assets/` folder of the repository provided)//DONE
+- Display the Product type/Vehicle type icon for each product (You may use the SVG icons from the `assets/` folder of the repository provided)//DONE
+- Offer different sorting orders//DONE
 - Use the React Native Bridge to communicate between the native code and the JS code (e.g. Theme toggle on the native side, log the selected product on the native side, …)
 - Use TypeScript
 - Surprise us!
