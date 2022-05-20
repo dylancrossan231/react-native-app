@@ -4,8 +4,6 @@ import {
   FlatList,
   SafeAreaView,
   StyleSheet,
-  View,
-  TouchableOpacity,
 } from "react-native";
 import { routes } from "../../routes";
 import { getProductsAction } from "../../redux/actions";
@@ -90,7 +88,6 @@ const ProductList = ({ navigation }) => {
   );
 };
 
-// supplier name, category, ETA (in min), price
 export default ProductList;
 
 const styles = StyleSheet.create({

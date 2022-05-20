@@ -1,11 +1,8 @@
-import { Box } from "native-base";
 import React from "react";
-import {
-  Text,
-} from "react-native";
+import { Text } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
 import ProductItemImage from "./productTemplates/ProductItemTemplate";
-import {Button} from "native-base"
+import { Button } from "native-base";
 const ProductItem = ({ route, navigation }) => {
   const dispatch = useDispatch();
   const { products, error } = useSelector((state) => state.productSlice);
@@ -32,4 +29,3 @@ const ProductItem = ({ route, navigation }) => {
   return <ProductItemImage product={product} />;
 };
 export default ProductItem;
-

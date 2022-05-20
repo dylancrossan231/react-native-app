@@ -5,7 +5,6 @@ export const productSlice = createSlice({
 
   reducers: {
     setProducts: (state, action) => {
-      console.log(action.payload, "HERE");
       const productArray = action.payload;
       productArray.sort(function (etaA, etaB) {
         return etaA.eta - etaB.eta;

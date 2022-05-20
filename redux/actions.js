@@ -22,11 +22,9 @@ export const getProductsAction = () => {
         return response.json();
       })
       .then((data) => {
-        console.log("Success", data)
         dispatch(setProducts(data));
       })
       .catch((error) => {
-        console.log("error getting data!", error);
         dispatch(setError("Error: Could not connect to server", ))
       });
   };

@@ -1,7 +1,7 @@
-import { AspectRatio, HStack } from "native-base";
+import { HStack } from "native-base";
 import React from "react";
 import { TouchableOpacity, StyleSheet } from "react-native";
-import { Box, Image, Center, Stack, Heading, Text } from "native-base";
+import { Box, Center, Stack, Heading, Text } from "native-base";
 import ImageTemplate from "./ProductItemImage";
 const ProductItemTemplate = ({ product, onPress }) => {
   return (
