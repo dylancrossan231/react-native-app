@@ -2,7 +2,7 @@ import { HStack } from "native-base";
 import React from "react";
 import { TouchableOpacity, StyleSheet } from "react-native";
 import { Box, Center, Stack, Heading, Text } from "native-base";
-import ImageTemplate from "./ProductItemImage";
+import ProductItemImage from "./ProductItemImage";
 const ProductItemTemplate = ({ product, onPress }) => {
   return (
     <TouchableOpacity onPress={onPress} style={styles.item}>
@@ -26,7 +26,7 @@ const ProductItemTemplate = ({ product, onPress }) => {
           }}
         >
           <Box>
-            <ImageTemplate
+            <ProductItemImage
               productType={product.category.productType}
               vehicleType={product.category.vehicleType}
             />

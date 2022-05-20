@@ -1,7 +1,7 @@
 import React from "react";
 import { Text } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
-import ProductItemImage from "./productTemplates/ProductItemTemplate";
+import ProductItemTemplate from "./productTemplates/ProductItemTemplate";
 import { Button } from "native-base";
 const ProductItem = ({ route, navigation }) => {
   const dispatch = useDispatch();
@@ -26,6 +26,6 @@ const ProductItem = ({ route, navigation }) => {
     );
   }
 
-  return <ProductItemImage product={product} />;
+  return <ProductItemTemplate product={product} />;
 };
 export default ProductItem;
