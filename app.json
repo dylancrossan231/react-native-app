@@ -1,4 +1,6 @@
 {
   "name": "reactNativeAssesment",
-  "displayName": "reactNativeAssesment"
+  "displayName": "reactNativeAssesment",
+  "packagerOpts": { "config": "metro.config.js", "sourceExts": [ "js","jsx","svg","ts","tsx"] }
+
 }

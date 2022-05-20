@@ -1,8 +1,11 @@
 
-import { setProducts, setError } from "./reducers/Products/productSlice";
+import {
+  setProducts,
+  setError,
+} from "./reducers/Products/productSlice";
 
 
-export const getProductsAction = dispatch => {
+export const getProductsAction = () => {
   
   return (dispatch) => {
     fetch(
@@ -28,10 +31,3 @@ export const getProductsAction = dispatch => {
       });
   };
 };
-  //       console.log("error load workouts!", error);
-  //       return dispatch({
-  //         type: "SET_ERROR",
-  //         payload: "Error: Could not connect to the server",
-  //       });
-  //     });
-  // };

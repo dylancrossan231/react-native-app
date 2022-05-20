@@ -1,7 +1,8 @@
+import { Box } from "native-base";
 import React from "react";
 import { Button, Text, FlatList,SafeAreaView, StyleSheet,View } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
-
+import ProductItemImage from "./productTemplates/ProductItemTemplate";
 const ProductItem = ({route, navigation}) => {
   const dispatch = useDispatch();
   const {products, error} = useSelector((state) => state.productSlice);
@@ -23,35 +24,20 @@ const ProductItem = ({route, navigation}) => {
   const productIndex = products.findIndex(item => item.availabilityId === id);
   const product = products[productIndex]
 
-  return (
-    
-    <View style={styles.item}>
-    <Text>Category:</Text>
-     <Text style={styles.title}>{product.category.productType} {product.category.vehicleType}</Text>
-     <Text >Supplier: {product.supplier.supplierName}</Text>
-     <Text>ETA: {product.eta} minutes</Text>
-      <Text>
-       Price: {product.price.currency}{product.price.amount} 
-     </Text> 
-
-    </View>
-  );
+  return <ProductItemImage product={product} />;
 };
 export default ProductItem ;
 
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    marginTop: 0,
-  },
+
   item: {
-    backgroundColor: '#f9c2ff',
-    padding: 20,
+    padding: 10,
     marginVertical: 8,
     marginHorizontal: 16,
   },
   title: {
     fontSize: 22,
   },
+  
 });
